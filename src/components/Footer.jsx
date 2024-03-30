@@ -8,9 +8,14 @@ const Footer = () => {
         <div>
           <p className="font-semibold text-gray text-xs">
             More ways to shop:{' '}
-            <span className="underline text-blue">Find an Apple Store </span>
-            or <span className="underline text-blue">other retailer</span> near
-            you.
+            <span className="underline text-blue cursor-pointer">
+              Find an Apple Store{' '}
+            </span>
+            or{' '}
+            <span className="underline text-blue cursor-pointer">
+              other retailer
+            </span>{' '}
+            near you.
           </p>
           <p className="font-semibold text-gray text-xs">
             Or call 000800-040-1966
@@ -23,16 +28,19 @@ const Footer = () => {
           <p className="font-semibold text-gray text-xs">
             Copright @ 2024 Apple Inc. All rights reserved.
           </p>
-          <div className="flex">
+          <ul className="flex flex-wrap">
             {footerLinks.map((link, i) => (
-              <p key={link} className="font-semibold text-gray text-xs">
+              <li
+                key={link}
+                className="font-semibold text-gray text-xs cursor-pointer"
+              >
                 {link}{' '}
                 {i !== footerLinks.length - 1 && (
-                  <span className="mx-2"> | </span>
+                  <span className="mx-2 cursor-default"> | </span>
                 )}
-              </p>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </footer>
